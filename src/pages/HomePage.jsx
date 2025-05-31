@@ -29,11 +29,11 @@ const HomePage = () => {
     <div className="space-y-12">
       {/* Hero Section */}
       <div className="text-center space-y-6">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
+        <h1 className="text-4xl md:text-6xl font-bold text-primary-900 dark:text-white">
           AI Consultant
-          <span className="block text-primary-600">for Your Business</span>
+          <span className="block text-primary-600 dark:text-primary-400">for Your Business</span>
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-xl text-primary-600 dark:text-primary-300 max-w-3xl mx-auto">
           Get personalized AI recommendations through our intelligent consultation system. 
           From questionnaire to dashboard, we guide you through finding the perfect AI solution.
         </p>
@@ -58,48 +58,48 @@ const HomePage = () => {
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map(({ icon: Icon, title, description }, index) => (
           <div key={index} className="card text-center space-y-4">
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 rounded-lg">
-              <Icon className="h-6 w-6 text-primary-600" />
+            <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg">
+              <Icon className="h-6 w-6 text-primary-600 dark:text-primary-400" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
-            <p className="text-gray-600">{description}</p>
+            <h3 className="text-lg font-semibold text-primary-900 dark:text-white">{title}</h3>
+            <p className="text-primary-600 dark:text-primary-300">{description}</p>
           </div>
         ))}
       </div>
 
       {/* Process Section */}
       <div className="card">
-        <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+        <h2 className="text-2xl font-bold text-primary-900 dark:text-white mb-8 text-center">
           How It Works
         </h2>
         <div className="grid md:grid-cols-4 gap-8">
           <div className="text-center space-y-3">
-            <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold mx-auto">
+            <div className="w-8 h-8 bg-primary-600 dark:bg-primary-500 text-white rounded-full flex items-center justify-center font-bold mx-auto">
               1
             </div>
-            <h3 className="font-semibold">Questionnaire</h3>
-            <p className="text-sm text-gray-600">Answer questions about your business needs</p>
+            <h3 className="font-semibold text-primary-900 dark:text-white">Questionnaire</h3>
+            <p className="text-sm text-primary-600 dark:text-primary-300">Answer questions about your business needs</p>
           </div>
           <div className="text-center space-y-3">
-            <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold mx-auto">
+            <div className="w-8 h-8 bg-primary-600 dark:bg-primary-500 text-white rounded-full flex items-center justify-center font-bold mx-auto">
               2
             </div>
-            <h3 className="font-semibold">Consultation</h3>
-            <p className="text-sm text-gray-600">Chat with our AI to refine requirements</p>
+            <h3 className="font-semibold text-primary-900 dark:text-white">Consultation</h3>
+            <p className="text-sm text-primary-600 dark:text-primary-300">Chat with our AI to refine requirements</p>
           </div>
           <div className="text-center space-y-3">
-            <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold mx-auto">
+            <div className="w-8 h-8 bg-primary-600 dark:bg-primary-500 text-white rounded-full flex items-center justify-center font-bold mx-auto">
               3
             </div>
-            <h3 className="font-semibold">Analysis</h3>
-            <p className="text-sm text-gray-600">Get intelligent recommendations</p>
+            <h3 className="font-semibold text-primary-900 dark:text-white">Analysis</h3>
+            <p className="text-sm text-primary-600 dark:text-primary-300">Get intelligent recommendations</p>
           </div>
           <div className="text-center space-y-3">
-            <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold mx-auto">
+            <div className="w-8 h-8 bg-primary-600 dark:bg-primary-500 text-white rounded-full flex items-center justify-center font-bold mx-auto">
               4
             </div>
-            <h3 className="font-semibold">Dashboard</h3>
-            <p className="text-sm text-gray-600">View visual insights and next steps</p>
+            <h3 className="font-semibold text-primary-900 dark:text-white">Dashboard</h3>
+            <p className="text-sm text-primary-600 dark:text-primary-300">View visual insights and next steps</p>
           </div>
         </div>
       </div>

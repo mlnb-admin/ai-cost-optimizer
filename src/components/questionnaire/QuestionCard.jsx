@@ -31,12 +31,12 @@ const QuestionCard = ({ question, value, onChange, error }) => {
   return (
     <div className="space-y-4">
       <div>
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">
+        <h3 className="text-lg font-semibold text-primary-900 dark:text-white mb-2">
           {question.question}
           {question.required && <span className="text-red-500 ml-1">*</span>}
         </h3>
         {question.description && (
-          <p className="text-sm text-gray-600 mb-4">{question.description}</p>
+          <p className="text-sm text-primary-600 dark:text-primary-300 mb-4">{question.description}</p>
         )}
       </div>
 
@@ -54,11 +54,11 @@ const QuestionCard = ({ question, value, onChange, error }) => {
                   value={option.value}
                   checked={isSelected}
                   onChange={() => handleOptionChange(option.value, isMultiSelect)}
-                  className="mt-1 h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
+                  className="mt-1 h-4 w-4 text-primary-600 focus:ring-primary-500 border-primary-300 dark:border-primary-600 bg-white dark:bg-primary-700 rounded"
                 />
                 <div className="flex-1">
                   <span className={`text-sm font-medium transition-colors ${
-                    isSelected ? 'text-primary-700' : 'text-gray-700 group-hover:text-gray-900'
+                    isSelected ? 'text-primary-700 dark:text-primary-400' : 'text-primary-700 dark:text-primary-300 group-hover:text-primary-900 dark:group-hover:text-white'
                   }`}>
                     {option.label}
                   </span>
@@ -82,7 +82,7 @@ const QuestionCard = ({ question, value, onChange, error }) => {
       </div>
 
       {error && (
-        <div className="flex items-center space-x-2 text-red-600 text-sm">
+        <div className="flex items-center space-x-2 text-red-600 dark:text-red-400 text-sm">
           <AlertCircle className="h-4 w-4" />
           <span>{error}</span>
         </div>

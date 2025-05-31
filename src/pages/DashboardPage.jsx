@@ -80,8 +80,8 @@ const DashboardPage = () => {
       {/* Header */}
       <div className="flex justify-between items-start">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">AI Consultation Dashboard</h1>
-          <p className="text-lg text-gray-600 mt-2">
+          <h1 className="text-3xl font-bold text-primary-900 dark:text-white">AI Consultation Dashboard</h1>
+          <p className="text-lg text-primary-600 dark:text-primary-300 mt-2">
             Your personalized AI recommendations and implementation roadmap
           </p>
         </div>
@@ -103,37 +103,37 @@ const DashboardPage = () => {
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div className="card text-center">
-          <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-lg mb-4">
-            <TrendingUp className="h-6 w-6 text-green-600" />
+          <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg mb-4">
+            <TrendingUp className="h-6 w-6 text-green-600 dark:text-green-400" />
           </div>
-          <h3 className="text-2xl font-bold text-gray-900">{metrics.totalROI}</h3>
-          <p className="text-sm text-gray-600">Expected ROI</p>
+          <h3 className="text-2xl font-bold text-primary-900 dark:text-white">{metrics.totalROI}</h3>
+          <p className="text-sm text-primary-600 dark:text-primary-300">Expected ROI</p>
         </div>
         <div className="card text-center">
-          <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">
-            <DollarSign className="h-6 w-6 text-blue-600" />
+          <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg mb-4">
+            <DollarSign className="h-6 w-6 text-blue-600 dark:text-blue-400" />
           </div>
-          <h3 className="text-2xl font-bold text-gray-900">{metrics.costSavings}</h3>
-          <p className="text-sm text-gray-600">Annual Savings</p>
+          <h3 className="text-2xl font-bold text-primary-900 dark:text-white">{metrics.costSavings}</h3>
+          <p className="text-sm text-primary-600 dark:text-primary-300">Annual Savings</p>
         </div>
         <div className="card text-center">
-          <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4">
-            <Clock className="h-6 w-6 text-purple-600" />
+          <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg mb-4">
+            <Clock className="h-6 w-6 text-purple-600 dark:text-purple-400" />
           </div>
-          <h3 className="text-2xl font-bold text-gray-900">{metrics.timeToValue}</h3>
-          <p className="text-sm text-gray-600">Time to Value</p>
+          <h3 className="text-2xl font-bold text-primary-900 dark:text-white">{metrics.timeToValue}</h3>
+          <p className="text-sm text-primary-600 dark:text-primary-300">Time to Value</p>
         </div>
         <div className="card text-center">
-          <div className="inline-flex items-center justify-center w-12 h-12 bg-yellow-100 rounded-lg mb-4">
-            <Star className="h-6 w-6 text-yellow-600" />
+          <div className="inline-flex items-center justify-center w-12 h-12 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg mb-4">
+            <Star className="h-6 w-6 text-yellow-600 dark:text-yellow-400" />
           </div>
-          <h3 className="text-2xl font-bold text-gray-900">{metrics.riskLevel}</h3>
-          <p className="text-sm text-gray-600">Risk Level</p>
+          <h3 className="text-2xl font-bold text-primary-900 dark:text-white">{metrics.riskLevel}</h3>
+          <p className="text-sm text-primary-600 dark:text-primary-300">Risk Level</p>
         </div>
       </div>
 
       {/* Tabs */}
-      <div className="border-b border-gray-200">
+      <div className="border-b border-primary-200 dark:border-primary-700">
         <nav className="-mb-px flex space-x-8">
           {tabs.map((tab) => (
             <button
@@ -141,8 +141,8 @@ const DashboardPage = () => {
               onClick={() => setActiveTab(tab.id)}
               className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
                 activeTab === tab.id
-                  ? 'border-primary-500 text-primary-600'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                  ? 'border-primary-500 text-primary-600 dark:text-primary-400'
+                  : 'border-transparent text-primary-500 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 hover:border-primary-300 dark:hover:border-primary-600'
               }`}
             >
               {tab.label}
@@ -157,29 +157,29 @@ const DashboardPage = () => {
           <div className="grid lg:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="card">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Your Profile Summary</h3>
+                <h3 className="text-lg font-semibold text-primary-900 dark:text-white mb-4">Your Profile Summary</h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Business Type:</span>
-                    <span className="font-medium">{state.questionnaireData.businessType || 'Not specified'}</span>
+                    <span className="text-primary-600 dark:text-primary-300">Business Type:</span>
+                    <span className="font-medium text-primary-900 dark:text-white">{state.questionnaireData.businessType || 'Not specified'}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Primary Objective:</span>
-                    <span className="font-medium">{state.questionnaireData.primaryObjective || 'Not specified'}</span>
+                    <span className="text-primary-600 dark:text-primary-300">Primary Objective:</span>
+                    <span className="font-medium text-primary-900 dark:text-white">{state.questionnaireData.primaryObjective || 'Not specified'}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Team Size:</span>
-                    <span className="font-medium">{state.questionnaireData.teamSize || 'Not specified'}</span>
+                    <span className="text-primary-600 dark:text-primary-300">Team Size:</span>
+                    <span className="font-medium text-primary-900 dark:text-white">{state.questionnaireData.teamSize || 'Not specified'}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Budget Range:</span>
-                    <span className="font-medium">{state.questionnaireData.budget || 'Not specified'}</span>
+                    <span className="text-primary-600 dark:text-primary-300">Budget Range:</span>
+                    <span className="font-medium text-primary-900 dark:text-white">{state.questionnaireData.budget || 'Not specified'}</span>
                   </div>
                 </div>
               </div>
               
               <div className="card">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Top Recommendation</h3>
+                <h3 className="text-lg font-semibold text-primary-900 dark:text-white mb-4">Top Recommendation</h3>
                 <RecommendationCard recommendation={recommendations[0]} isHighlighted />
               </div>
             </div>
@@ -211,17 +211,17 @@ const DashboardPage = () => {
 
         {activeTab === 'implementation' && (
           <div className="card">
-            <h3 className="text-lg font-semibold text-gray-900 mb-6">Implementation Roadmap</h3>
+            <h3 className="text-lg font-semibold text-primary-900 dark:text-white mb-6">Implementation Roadmap</h3>
             <div className="space-y-6">
               {recommendations.map((rec, index) => (
                 <div key={rec.id} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-medium">
+                  <div className="flex-shrink-0 w-8 h-8 bg-primary-600 dark:bg-primary-500 text-white rounded-full flex items-center justify-center text-sm font-medium">
                     {index + 1}
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-medium text-gray-900">{rec.title}</h4>
-                    <p className="text-sm text-gray-600 mt-1">{rec.description}</p>
-                    <div className="flex items-center space-x-4 mt-2 text-xs text-gray-500">
+                    <h4 className="font-medium text-primary-900 dark:text-white">{rec.title}</h4>
+                    <p className="text-sm text-primary-600 dark:text-primary-300 mt-1">{rec.description}</p>
+                    <div className="flex items-center space-x-4 mt-2 text-xs text-primary-500 dark:text-primary-400">
                       <span>Timeline: {rec.implementationTime}</span>
                       <span>Cost: {rec.cost}</span>
                       <span>ROI: {rec.estimatedROI}</span>

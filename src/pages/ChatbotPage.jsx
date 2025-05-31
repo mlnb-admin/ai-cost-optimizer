@@ -85,8 +85,8 @@ Let me ask a few clarifying questions to refine my suggestions. What specific ch
     <div className="max-w-4xl mx-auto space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <h1 className="text-3xl font-bold text-gray-900">AI Consultation</h1>
-        <p className="text-lg text-gray-600">
+        <h1 className="text-3xl font-bold text-primary-900 dark:text-white">AI Consultation</h1>
+        <p className="text-lg text-primary-600 dark:text-primary-300">
           Let's discuss your AI needs and refine the recommendations
         </p>
       </div>
@@ -108,8 +108,8 @@ Let me ask a few clarifying questions to refine my suggestions. What specific ch
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center ${
                     msg.type === 'user'
-                      ? 'bg-primary-600 text-white'
-                      : 'bg-gray-200 text-gray-600'
+                      ? 'bg-primary-600 dark:bg-primary-500 text-white'
+                      : 'bg-primary-200 dark:bg-primary-700 text-primary-600 dark:text-primary-300'
                   }`}
                 >
                   {msg.type === 'user' ? (
@@ -121,8 +121,8 @@ Let me ask a few clarifying questions to refine my suggestions. What specific ch
                 <div
                   className={`px-4 py-2 rounded-lg ${
                     msg.type === 'user'
-                      ? 'bg-primary-600 text-white'
-                      : 'bg-gray-100 text-gray-900'
+                      ? 'bg-primary-600 dark:bg-primary-500 text-white'
+                      : 'bg-primary-100 dark:bg-primary-700 text-primary-900 dark:text-primary-100'
                   }`}
                 >
                   <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
@@ -137,14 +137,14 @@ Let me ask a few clarifying questions to refine my suggestions. What specific ch
           {isTyping && (
             <div className="flex justify-start">
               <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 rounded-full bg-gray-200 text-gray-600 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-primary-200 dark:bg-primary-700 text-primary-600 dark:text-primary-300 flex items-center justify-center">
                   <Bot className="h-4 w-4" />
                 </div>
-                <div className="bg-gray-100 px-4 py-2 rounded-lg">
+                <div className="bg-primary-100 dark:bg-primary-700 px-4 py-2 rounded-lg">
                   <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                    <div className="w-2 h-2 bg-primary-400 dark:bg-primary-500 rounded-full animate-bounce"></div>
+                    <div className="w-2 h-2 bg-primary-400 dark:bg-primary-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                    <div className="w-2 h-2 bg-primary-400 dark:bg-primary-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                   </div>
                 </div>
               </div>
@@ -176,7 +176,7 @@ Let me ask a few clarifying questions to refine my suggestions. What specific ch
 
       {/* Action Buttons */}
       <div className="flex justify-between items-center">
-        <div className="text-sm text-gray-500">
+        <div className="text-sm text-primary-500 dark:text-primary-400">
           {state.chatHistory.length > 1 ? 'Continue the conversation or' : 'Start chatting or'}
         </div>
         

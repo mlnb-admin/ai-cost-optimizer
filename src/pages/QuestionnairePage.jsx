@@ -82,10 +82,10 @@ const QuestionnairePage = () => {
     <div className="max-w-4xl mx-auto space-y-8">
       {/* Header */}
       <div className="text-center space-y-4">
-        <h1 className="text-3xl font-bold text-gray-900">
+        <h1 className="text-3xl font-bold text-primary-900 dark:text-white">
           AI Consultation Questionnaire
         </h1>
-        <p className="text-lg text-gray-600">
+        <p className="text-lg text-primary-600 dark:text-primary-300">
           Help us understand your needs to provide the best AI recommendations
         </p>
       </div>
@@ -100,10 +100,10 @@ const QuestionnairePage = () => {
       {/* Current Section */}
       <div className="card">
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+          <h2 className="text-2xl font-bold text-primary-900 dark:text-white mb-2">
             {currentSection.title}
           </h2>
-          <p className="text-gray-600">
+          <p className="text-primary-600 dark:text-primary-300">
             {currentSection.description}
           </p>
         </div>
@@ -128,15 +128,15 @@ const QuestionnairePage = () => {
           disabled={isFirstSection}
           className={`inline-flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-colors ${
             isFirstSection
-              ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              ? 'bg-primary-100 dark:bg-primary-700 text-primary-400 dark:text-primary-500 cursor-not-allowed'
+              : 'bg-primary-200 dark:bg-primary-600 text-primary-700 dark:text-primary-200 hover:bg-primary-300 dark:hover:bg-primary-500'
           }`}
         >
           <ChevronLeft className="h-4 w-4" />
           <span>Previous</span>
         </button>
 
-        <div className="text-sm text-gray-500">
+        <div className="text-sm text-primary-500 dark:text-primary-400">
           Section {currentSectionIndex + 1} of {sections.length}
         </div>
 
