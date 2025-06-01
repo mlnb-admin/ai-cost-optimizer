@@ -6,6 +6,8 @@ import HomePage from './pages/HomePage';
 import QuestionnairePage from './pages/QuestionnairePage';
 import ChatbotPage from './pages/ChatbotPage';
 import DashboardPage from './pages/DashboardPage';
+import TestGraphTable from './components/TestGraphTable';
+import TableDebugTest from './components/TableDebugTest';
 import './index.css';
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
               <Route path="/questionnaire" element={<QuestionnairePage />} />
               <Route path="/consultation" element={<ChatbotPage />} />
               <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="/demo" element={<TestGraphTable />} />
+              <Route path="/debug" element={<TableDebugTest />} />
             </Routes>
           </Layout>
         </Router>
