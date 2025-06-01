@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Send, Bot, User, ArrowRight } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 import { useConsultation } from '../contexts/ConsultationContext';
 import { formatQuestionnaireForChatbot, generateChatbotPrompt } from '../utils/questionnaireFormatter';
 
@@ -253,9 +254,9 @@ What specific area would you like to explore in more detail?`;
   }
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
+    <div className="min-h-screen flex flex-col w-full">
       {/* Header */}
-      <div className="text-center space-y-4">
+      <div className="text-center space-y-4 py-6 flex-shrink-0">
         <h1 className="text-3xl font-bold text-primary-900 dark:text-white">AI Consultation</h1>
         <p className="text-lg text-primary-600 dark:text-primary-300">
           Personalized recommendations based on your comprehensive assessment
@@ -263,9 +264,9 @@ What specific area would you like to explore in more detail?`;
       </div>
 
       {/* Chat Container */}
-      <div className="card h-96 flex flex-col">
+      <div className="card flex-1 flex flex-col w-full">
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto space-y-4 mb-4">
+        <div className="space-y-4 mb-4">
           {state.chatHistory.map((msg) => (
             <div
               key={msg.id}
@@ -292,7 +293,27 @@ What specific area would you like to explore in more detail?`;
                       : 'bg-primary-100 dark:bg-primary-700 text-primary-900 dark:text-primary-100'
                   }`}
                 >
-                  <div className="text-sm whitespace-pre-wrap">{msg.content}</div>
+                  <div className="text-sm">
+                    {msg.type === 'user' ? (
+                      <div className="whitespace-pre-wrap">{msg.content}</div>
+                    ) : (
+                      <div className="prose prose-sm max-w-none prose-primary dark:prose-invert">
+                        <ReactMarkdown 
+                          components={{
+                            p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
+                            ul: ({ children }) => <ul className="mb-2 last:mb-0 pl-4">{children}</ul>,
+                            li: ({ children }) => <li className="mb-1">{children}</li>,
+                            strong: ({ children }) => <strong className="font-semibold">{children}</strong>,
+                            h1: ({ children }) => <h1 className="text-lg font-bold mb-2">{children}</h1>,
+                            h2: ({ children }) => <h2 className="text-base font-bold mb-2">{children}</h2>,
+                            h3: ({ children }) => <h3 className="text-sm font-bold mb-1">{children}</h3>,
+                          }}
+                        >
+                          {msg.content}
+                        </ReactMarkdown>
+                      </div>
+                    )}
+                  </div>
                   <div className={`text-xs mt-1 opacity-70`}>
                     {new Date(msg.timestamp).toLocaleTimeString()}
                   </div>
@@ -322,7 +343,7 @@ What specific area would you like to explore in more detail?`;
         </div>
 
         {/* Input */}
-        <div className="flex space-x-4">
+        <div className="flex space-x-4 mt-auto">
           <input
             type="text"
             value={message}
@@ -346,7 +367,7 @@ What specific area would you like to explore in more detail?`;
       </div>
 
       {/* Action Buttons */}
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center py-4 flex-shrink-0">
         <div className="text-sm text-primary-500 dark:text-primary-400">
           {state.chatHistory.length > 1 ? 'Continue exploring or' : 'Ask questions or'}
         </div>
