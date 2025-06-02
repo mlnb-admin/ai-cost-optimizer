@@ -2,6 +2,10 @@
 
 A modern React-based frontend for the AI Consultant System that guides users through a structured consultation process to receive personalized AI recommendations.
 
+# Demo Video
+
+https://youtu.be/s-SdUOfXuto
+
 ## 🚀 Features
 
 - **Interactive Questionnaire**: Dynamic MCQ-based forms to gather user requirements
