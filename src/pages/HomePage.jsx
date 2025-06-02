@@ -5,12 +5,12 @@ const HomePage = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Get intelligent recommendations based on your specific business needs and requirements.',
+      title: 'Smart Assessment',
+      description: 'Our agent collects your context through smart assessment',
     },
     {
       icon: Users,
-      title: 'Expert Consultation',
+      title: 'AI-Powered Analysis',
       description: 'Interactive chatbot consultation to clarify your goals and refine recommendations.',
     },
     {
@@ -30,12 +30,13 @@ const HomePage = () => {
       {/* Hero Section */}
       <div className="text-center space-y-6">
         <h1 className="text-4xl md:text-6xl font-bold text-primary-900 dark:text-white">
-          AI Consultant
-          <span className="block text-primary-600 dark:text-primary-400">for Your Business</span>
+          AI Cost Optimization
+          <span className="block text-primary-600 dark:text-primary-400">Advisor Agent</span>
         </h1>
         <p className="text-xl text-primary-600 dark:text-primary-300 max-w-3xl mx-auto">
-          Get personalized AI recommendations through our intelligent consultation system. 
-          From questionnaire to dashboard, we guide you through finding the perfect AI solution.
+          Built on Lyzr Studio that acts as an intelligent consultant, 
+          helping enterprises optimize their AI strategy for maximum cost 
+          efficiency and business impact.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link

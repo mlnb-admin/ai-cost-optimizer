@@ -61,7 +61,7 @@ const RecommendationCard = ({ recommendation, isHighlighted = false }) => {
       </div>
 
       {/* Benefits */}
-      <div className="mb-4">
+      <div className="grid grid-cols-3 mb-4">
         <h4 className="font-medium text-primary-900 dark:text-white mb-2">Key Benefits:</h4>
         <ul className="space-y-1">
           {recommendation.benefits.map((benefit, index) => (

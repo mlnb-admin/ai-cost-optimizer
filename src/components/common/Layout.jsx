@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
               <Brain className="h-8 w-8 text-primary-600 dark:text-primary-400" />
-              <h1 className="text-xl font-bold text-primary-900 dark:text-white">AI Consultant</h1>
+              <h1 className="text-xl font-bold text-primary-900 dark:text-white">AI Optimizer</h1>
             </div>
             
             <div className="flex items-center space-x-4">

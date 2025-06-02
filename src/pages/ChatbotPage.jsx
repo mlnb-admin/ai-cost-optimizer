@@ -328,7 +328,7 @@ const ChatbotPage = () => {
                 <div className="flex-1">
                   <div className="flex items-center space-x-2 mb-1">
                     <span className="text-sm font-medium text-primary-700 dark:text-primary-300">
-                      AI Consultant
+                      AI Optimizer
                     </span>
                   </div>
                   <div className="px-4 py-2 rounded-lg bg-primary-100 dark:bg-primary-700">
